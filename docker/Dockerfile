@@ -11,7 +11,7 @@
 #    docker build -f docker/Dockerfile --build-arg PYTHON_VERSION=3.6 .
 #
 
-ARG PYTHON_VERSION=2
+ARG PYTHON_VERSION=3.6
 
 ###
 ### Stage 0: builder
@@ -61,6 +61,7 @@ RUN apk add --no-cache --virtual .runtime_deps \
         libffi \
         libjpeg-turbo \
         libressl \
+        libxml2-dev \
         libxslt \
         libpq \
         zlib \
